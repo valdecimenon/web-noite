@@ -1,0 +1,151 @@
+<html lang="pt-br">
+
+<head>
+    <title>Primeira página</title>
+    <meta charset="utf-8">
+
+    <style>
+        h1,
+        h2,
+        h3 {
+            color: brown
+        }
+
+        #painel {
+            background-color: aquamarine;
+            width: 50%;
+            height: 100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .imagem {
+            width: 40%;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        .centralizado {
+            width: 400px;
+            height: 100px;
+            margin: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: darksalmon;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Altura h1</h1>
+    <h2>Altura h2</h2>
+    <h3>Altura h3</h3>
+    <h4>Altura h4</h4>
+    <h5>Altura h5</h5>
+    <h6>Altura h6</h6>
+
+    caneta azul<br>
+    azul caneta
+    atenção
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rerum voluptatem doloremque error totam quas autem
+        excepturi, rem, enim iste aspernatur ea eveniet aliquid soluta esse necessitatibus aperiam, vitae quae! </p>
+
+    <label for="file">Baixando arquivo</label>
+    <progress id="file" value="32" max="100">32%</progress>
+
+    <div id="painel">
+        <h1>Texto do Painel</h1>
+    </div>
+
+    <h2>Lista não ordenada</h2>
+    <!-- unordered list: disc, circle, square  -->
+    <ul style="list-style-type:square">
+        <li>Café</li>
+        <li>Chá</li>
+        <li>Leite</li>
+    </ul>
+
+    <h2>Lista ordenada</h2>
+    <ol type="A">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <img class="imagem" src="https://t.ctcdn.com.br/Vu4QZcoG8oyLRTxer4kqlgXGD1A=/1400x788/smart/i6161.jpeg"
+        alt="Nascer do Sol">
+
+    <iframe width="800" height="600" src="https://www.youtube.com/embed/xMbg-ZsFCCo" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+    </iframe>
+
+    <hr>
+    <h2>Formulário</h2>
+    <form action="pagina_destino.php" method="POST">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" id="sobrenome" name="sobrenome"><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <canvas id="meuCanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("meuCanvas")
+        var ctx = canvas.getContext('2d')
+        ctx.fillStyle = 'red'
+        ctx.fillRect(20,20, 75, 50)
+        // ativa a transparência
+        ctx.globalAlpha = 0.8  // opacidade
+        ctx.fillStyle = 'blue'
+        ctx.fillRect(50, 50, 75, 50)
+        ctx.fillStyle = 'green'
+        ctx.fillRect(0,80, 75, 50)
+    </script>
+
+    <h1>Exemplo de Tabela</h1>
+    <table class="centralizado">
+        <tr>
+            <th>Mês</th>
+            <th>Recebimento</th>
+        </tr>
+
+        <tr>
+            <td>Janeiro</td>
+            <td>R$ 100</td>
+        </tr>
+
+        <tr>
+            <td>Fevereiro</td>
+            <td>R$ 180</td>
+        </tr>
+
+    </table>
+
+    <footer>
+        <p>Autor: Valdeci Menon<br>
+            <a href="https://softgraf.com" target="_blank">SOFTGRAF Cursos Avançados</a>
+        </p>
+    </footer>
+
+</html>
