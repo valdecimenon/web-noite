@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+
+        body {
+            background: pink;
+        }
+
+        .container {
+            overflow: auto;
+        }
+
+        #painel {
+            float: none;
+            width: auto;
+        }
+
+        #menu-lista {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-item {
+            background-color: #c5e9c5;
+            border: 1px solid #bbb7eb;
+            border-radius: 4px;
+            list-style-type: none;
+            margin: 4px;
+            padding: 10px;
+        }
+
+        .menu-item:hover {
+            cursor: pointer;
+        }
+
+        #principal {
+            margin-left: 4px;
+        }
+
+        /*  media query  */
+        @media (min-width: 480px){
+            body {
+                background: #cff1ef;
+            }
+
+            #painel {
+                width: 200px;
+                float: left;
+            }
+
+            #principal {
+                margin-left: 216px;
+            }
+        }
+
+        @media (max-width: 1024px){
+            body {
+                background: #8bdf5d;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="painel">
+
+            <ul id="menu-lista">
+
+                <li class="menu-item">1</li>
+                <li class="menu-item">2</li>
+                <li class="menu-item">3</li>
+                <li class="menu-item">4</li>
+                <li class="menu-item">5</li>
+            </ul>
+
+        </div>
+
+        <div id="principal">
+            <h1>Redimensine o navegador para ver o efeito da media query</h1>
+            <p>Quando a janela do navegador ficar com largura menor que 480px
+               o menu flutuará à esquerda da página
+            </p>
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>

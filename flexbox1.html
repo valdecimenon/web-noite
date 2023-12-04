@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Flexbox 1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            background: aquamarine;
+            /* posicionamento flex padrão = row = linha */
+            display: flex;
+            flex-direction: row; /* row ou column   */
+            flex-wrap: wrap;  /* quebrar a linha  */
+
+            /* centralização horizontal  */
+            /* left, flex-start, center, right, flex-end  */
+            /* space-around, space-between, space-evenly */
+            justify-content: space-evenly;
+            /* centralizaçã vertical  */
+            align-items: center; /* start, center, end  */
+
+        }
+
+        .filho {
+            background-color: cyan;
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div style="order: 3; background-color:red" class="filho">Div 1</div>
+        <div style="order: 2; background-color:blue" class="filho">Div 2</div>
+        <div style="order: 1; background-color: yellow" class="filho">Div 3</div>
+        <div style="order: 0; background-color:magenta" class="filho">Div 4</div>
+
+    </div>
+    
+</body>
+</html>
