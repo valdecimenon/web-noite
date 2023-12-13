@@ -1,0 +1,133 @@
+
+/*
+   pseudo-elemento CSS: usado para estilizar uma parte de um elemento.
+   formato: seletor::pseudo-elemento
+   ::after ::before ::first-letter ::first-line ::marker ::selection
+*/
+
+/*
+  pseudo-classe CSS: usado para definir um estado especial de um elemento.
+  formato: seletor:pseudo-classe
+  :root :hover f:focus :active :link :visited :first-child :nth-child()
+
+  https://w3schools.com/css/css_pseudo_classes.asp
+*/
+
+.section-empresa {
+    /* border: 1px solid red; */
+    max-width: 940px;
+    margin-inline: auto; /* centraliza textos  */
+    text-align: justify;
+    padding-top: 2em;   /* 1em = 32px   */
+    padding-inline: 1em;  /* padding esquerdo e direito */
+    user-select: none;
+}
+
+.section-empresa h2{
+    text-align: center;
+    font-size: var(--altura-titulo);
+    margin: 0 0 1em;
+    color: var(--cor-verde-musgo);
+}
+
+.section-empresa h2::first-letter {
+    /* 1.5 X altura do elemento pai (2)  = 3em */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.section-empresa p {
+    margin: 0 0 1em;
+    line-height: 1.3em;  /* espaçamento entre linhas  */
+}
+
+.section-empresa p span{
+    margin-inline: 1.3em;
+}
+
+.section-empresa p strong {
+    font-weight: bold;
+    color: var(--cor-verde-limao);
+}
+
+.section-empresa p em {
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+/*----------------------------------------------------*/
+
+.section-produtos {
+    display: flex;
+    flex-direction: column;
+    max-width: 940px;
+
+    margin-inline: auto;  /* margem horizontal automática */
+    margin-bottom: 10px;
+    margin-top: 2em;
+    padding-inline: 1em; /* padding horizontal */
+}
+
+.section-produtos h3{
+    font-size: var(--altura-subtitulo);
+    margin-inline: auto;  /* margem horizontal automática */
+    margin-bottom: 1em;
+}
+
+.div-produtos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*  justificação horizontal, espaços entre elementos */
+}
+
+.div-produtos ul {
+    width: 135px;
+    font-style: italic;
+    line-height: 2.6em  ;
+}
+
+/* http://xahlee.info/comp/unicode_index.html */
+
+.div-produtos li::before {
+    content: "🍃";
+    font-size: 0.9em;
+    margin-right: 1em;
+}
+
+/*
+  nth-child(2n) = pares
+  nth-child(2n+1) = impares (pula 1)
+  nth-child(even) = impar
+  nth-child(odd) par
+  nth-last-child = nth-child -> porém começa pelo fim
+  first-child: só o primeiro
+  last-child: só o último
+*/  
+.div-produtos li:nth-child(2n+1){
+    font-weight: bold;
+}
+
+.div-produtos li{
+    transition: 0.5s;
+}
+
+.div-produtos li:hover {
+    font-size: 1.1em;
+}
+
+.div-produtos  img {
+    width: 36%;
+    opacity: 1;
+    transition: 1s;
+    box-shadow: 8px 8px 8px 0 var(--cor-cinza);
+}
+
+.div-produtos  img:hover{
+    opacity: 0.7;
+}
+
+.div-produtos .video{
+    width: 320px;
+    height: 220px;
+    margin-right: 10px;
+}
