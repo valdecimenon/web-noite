@@ -1,0 +1,59 @@
+1. Instalar o banco de dados mysql
+   https://dev.mysql.com/downloads/
+   
+   - MySQL Installer for Windows
+   - clica em Download para baixar o instalador
+   - clicar: No thanks, just start my download.
+   - executar o instalador
+   - instalar: Server e Workbench
+   - vai pedir usuário, usar o padrão: root
+   - vai pedir senha: digita uma senha fácil
+   - vai pedir a porta, usar a padrão: 3306
+
+2. Abrir o MySQL Workbench
+3. File -> New Query Tab
+4. CREATE DATABASE crudmundo
+   USE crudmundo
+
+5. Criar a tabela Produtos:
+CREATE TABLE Produtos (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   descricao VARCHAR(60) NOT NULL,
+   categoria INT NOT NULL,
+   preco DECIMAL(10,2) NOT NULL,
+   quantidade INT NOT NULL,
+   url VARCHAR(255)
+);
+
+
+6. Inserir registros
+-- Categoria
+-- 0 = Cereais
+-- 1 = Suplementos
+-- 2 = Temperos
+INSERT INTO Produtos VALUES (1, 'Granola com castanhas 1Kg', 0,
+	40.18, 5, 'cereais.png');
+    
+INSERT INTO Produtos VALUES (2, 'Whey protein 907g', 1,
+    379.39, 10, 'suplementos.png');
+    
+INSERT INTO Produtos VALUES (3, 'Alho em pó 59g', 2,
+      5.18, 15, 'temperos.png');
+
+-- mostra todos os produtos cadastrados
+SELECT * FROM Produtos;
+
+-- mostra somente as colunas descricao e preco
+SELECT descricao, preco FROM Produtos;
+
+-- mostra a soma de todos os preços
+SELECT SUM(preco) FROM Produtos;
+
+-- mostra o preço médio dos produtos
+SELECT AVG(preco) FROM Produtos;
+
+-- mostra o preço mínimo dos produtos
+SELECT MIN(preco) FROM Produtos;
+
+-- mostra o preço máximo dos produtos
+SELECT MAX(preco) FROM Produtos;

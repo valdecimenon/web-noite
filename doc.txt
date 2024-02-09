@@ -1,0 +1,21 @@
+Passo a passo para desenvolvimento do sistema
+
+1. Criação do Folders e das pastas gerais
+
+2. Criação do banco de dados (ver banco dados.txt)
+
+3. Instalação do nodeJS:  nodejs.org/en/download/
+
+4. Transformar a pasta do projeto em um Projeto Node JS
+   npm init -y    (node package manager)
+
+5. Instalar o express (servidor http)
+   npm install express
+
+6. Instalar o módulo mysql2 do node
+   npm install mysql2
+
+7. Instalar nodemon 
+   npm install nodemon
+   agora para rodar o servidor: npm run dev
+   
